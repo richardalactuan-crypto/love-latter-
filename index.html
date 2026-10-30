@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Message - Love Letter</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, #21104d, transparent 40%),
+    radial-gradient(circle at 80% 80%, #101c45, transparent 40%),
+    #05050b;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#8b5cf6 1px, transparent 1px);
+  background-size: 70px 70px, 110px 110px;
+  opacity: .25;
+  animation: stars 20s linear infinite;
+}
+
+@keyframes stars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: auto;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.tag {
+  color: #a78bfa;
+  letter-spacing: 5px;
+  font-size: 11px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(30px, 8vw, 65px);
+  margin: 25px 0 15px;
+  background: linear-gradient(90deg,#fff,#a78bfa,#38bdf8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 35px #8b5cf655;
+}
+
+.subtitle {
+  color: #aaa8c4;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.line {
+  width: 90px;
+  height: 3px;
+  margin: 30px auto;
+  background: linear-gradient(90deg,#8b5cf6,#38bdf8);
+  box-shadow: 0 0 15px #8b5cf6;
+}
+
+.card {
+  margin-top: 40px;
+  padding: 35px 25px;
+  background: #ffffff08;
+  border: 1px solid #8b5cf655;
+  border-radius: 22px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 40px #6d28d922;
+}
+
+.heart {
+  font-size: 42px;
+  color: #a78bfa;
+  text-shadow: 0 0 25px #a78bfa;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.2); }
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.name {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.message {
+  display: none;
+  text-align: left;
+  color: #dedbea;
+  line-height: 2;
+  font-size: 14px;
+  margin-top: 25px;
+  animation: appear 1s ease;
+}
+
+.message.show {
+  display: block;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  margin-top: 25px;
+  padding: 15px 28px;
+  border: 1px solid #a78bfa;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(100deg,#6d28d9,#2563eb);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #7c3aed66;
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px #8b5cf6;
+}
+
+.footer {
+  margin-top: 50px;
+  color: #77748f;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<main class="container">
+
+  <div class="tag">NEXORA PRESENTS</div>
+
+  <h1>ONE MESSAGE.</h1>
+
+  <p class="subtitle">
+    For the person who makes ordinary days extraordinary.
+  </p>
+
+  <div class="line"></div>
+
+  <section class="card">
+
+    <div class="heart">♥</div>
+
+    <h2>To Someone Special</h2>
+
+    <p class="subtitle">
+      There are things that words cannot easily explain...
+    </p>
+
+    <button onclick="openLetter()" id="openBtn">
+      OPEN MY LETTER ✦
+    </button>
+
+    <article class="message" id="letter">
+
+      <p>Dear <span class="name">My Special Someone</span>,</p>
+
+      <br>
+
+      <p>
+        Hindi ako magaling sa mga sweet na salita,
+        pero may isang bagay akong siguradong-sigurado:
+        espesyal ka sa buhay ko.
+      </p>
+
+      <br>
+
+      <p>
+        Sa dami ng taong nakilala ko, ikaw yung
+        taong gusto kong makasama sa mga simpleng
+        sandali. Yung kahit walang ginagawa,
+        masaya na basta ikaw ang kasama.
+      </p>
+
+      <br>
+
+      <p>
+        Hindi ko ipinapangako na magiging perfect
+        ang lahat. Pero ipinapangako kong magiging
+        totoo ako sa nararamdaman ko.
+      </p>
+
+      <br>
+
+      <p>
+        I don't need a perfect story.
+        I just want a real one, and if I get to
+        choose who's in it, I would still choose you.
+      </p>
+
+      <br>
+
+      <p>
+        Hindi ka basta chapter sa buhay ko.
+        Isa ka sa mga dahilan kung bakit gusto
+        kong maging mas magandang version ng sarili ko.
+      </p>
+
+      <br>
+
+      <p class="name">
+        You're not just someone I met.
+        You're someone I'm glad I found.
+      </p>
+
+      <br>
+
+      <p>Always yours,</p>
+      <p class="name">Someone who truly cares. ♥</p>
+
+    </article>
+
+  </section>
+
+  <div class="footer">
+    MADE WITH LOVE • NEXORA WEB STUDIO
+  </div>
+
+</main>
+
+<script>
+function openLetter() {
+  const letter = document.getElementById("letter");
+  const button = document.getElementById("openBtn");
+
+  letter.classList.toggle("show");
+
+  button.innerText = letter.classList.contains("show")
+    ? "CLOSE MY LETTER ✦"
+    : "OPEN MY LETTER ✦";
+}
+</script>
+
+</body>
+</html>
